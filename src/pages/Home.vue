@@ -15,9 +15,12 @@
 import { onMounted } from 'vue'
 import usePosts from "../api/usePosts";
 
+import { useStore } from 'vuex';
+
 export default {
   setup() {
     const { posts, fetchPosts } = usePosts()
+
     onMounted(fetchPosts)
 
     return {
